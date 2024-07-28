@@ -18,15 +18,14 @@ import ResetPassword from "./pages/ResetPassword";
 // import festivalData from './festivalData';
 import DetailsPage from "./pages/DetailsPage";
 function App() {
- 
   return (
     <>
-      <BrowserRouter>
+      <BrowserRouter basename="/Culture-festival-in-jordan/">
         <Routes>
-        <Route path="/festivals/:id" element={<DetailsPage />} />
+          <Route path="/festivals/:id" element={<DetailsPage />} />
 
-        {/* <Route path="/" element={<Home festivalData={festivalData} />} /> */}
-        {/* <Route path="/festivals/:id" element={<DetailsPage festivalData={festivalData} />} /> */}
+          {/* <Route path="/" element={<Home festivalData={festivalData} />} /> */}
+          {/* <Route path="/festivals/:id" element={<DetailsPage festivalData={festivalData} />} /> */}
           <Route path="/" element={<Home />} />
           <Route path="SignUp" element={<SignUp />} />
           <Route path="LogIn" element={<LogIn />} />
@@ -39,9 +38,9 @@ function App() {
           <Route path="Booking" element={<BookingConfirmed />} />
           {/* <Route path="Details/:id" element={<Details />} /> */}
           <Route path="checkout" element={<CheckOut />} />
-          <Route path="LogInAdmin" element={<LogInAdmin/>} />
+          <Route path="LogInAdmin" element={<LogInAdmin />} />
           <Route path="/details/:eventId" element={<Details />} />
-          <Route path="ResetPassword" element={<ResetPassword/>} />
+          <Route path="ResetPassword" element={<ResetPassword />} />
         </Routes>
       </BrowserRouter>
     </>
